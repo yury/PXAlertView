@@ -53,7 +53,7 @@ static const CGFloat AlertViewVerticalEdgeMinMargin = 25;
 - (UIWindow *)windowWithLevel:(UIWindowLevel)windowLevel
 {
 	NSArray *windows = [[UIApplication sharedApplication] windows];
-	for (UIWindow *window in windows) {
+	for (UIWindow *window in windows.reverseObjectEnumerator) {
 		if (window.windowLevel == windowLevel) {
 			return window;
 		}
